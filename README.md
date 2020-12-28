@@ -4,6 +4,7 @@ To run api server
 Open apis folder
   run 
   npm install
+  and then
   nodemon app.js
  server is run on Port number 4000
   
