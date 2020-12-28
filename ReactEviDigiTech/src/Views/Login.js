@@ -116,7 +116,7 @@ class Login extends Component {
         email,
         password,
       };
-      Axios.post("http://localhost:4000/login", loginCreditinals)
+      Axios.post("login", loginCreditinals)
         .then((response) => {
           removeLoader();
           if (response.status === 200 && response.data.length > 0) {

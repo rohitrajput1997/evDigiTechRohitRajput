@@ -131,7 +131,7 @@ class Register extends Component {
         phone,
       };
       addLoader();
-      Axios.post("http://localhost:4000/register", registerData)
+      Axios.post("register", registerData)
         .then((response) => {
           removeLoader();
           if (response.data.email !== email) {

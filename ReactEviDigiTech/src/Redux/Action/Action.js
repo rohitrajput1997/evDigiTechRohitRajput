@@ -7,7 +7,7 @@ export function employeeList() {
     return (
       addLoader(),
       axios
-        .get("http://localhost:4000/employee/fetch")
+        .get("employee/fetch")
         .then((response) => {
           dispatch(fetchEmployee(response.data));
           removeLoader();

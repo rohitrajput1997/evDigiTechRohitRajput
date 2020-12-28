@@ -128,11 +128,15 @@ function AddEmployee(props) {
       age !== "" &&
       salary !== "" &&
       companyId !== "" &&
-      error === ""
+      error.salary === "" &&
+      error.firstName === "" &&
+      error.age === "" &&
+      error.phone === "" &&
+      error.lastName === ""
     ) {
       addLoader();
       axios
-        .post("http://localhost:4000/employee/insert", AddEmployee)
+        .post("employee/insert", AddEmployee)
         .then((response) => {
           if (response.status === 200) {
             props.dispatch(employeeList());
